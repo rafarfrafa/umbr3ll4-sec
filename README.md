@@ -5,7 +5,7 @@ Seguindo a linhagem da essência.
 ![Django](https://img.shields.io/badge/-Django-333333?style=flat&logo=django)
 ![MySQL](https://img.shields.io/badge/-MySQL-333333?style=flat&logo=mysql)
 
-O site  de cadastro e gerenciamento de alunos para a **SKYHARD GYM**, uma academia **OldSchool** exalando a essência do bodybuilding.
+Site de introdução ao pentest e programação, levando conhecimento aos desenvolvedores e amigos.
 
 ---
 
@@ -21,13 +21,6 @@ Coming Soon!
 ```sql
 CREATE DATABASE db_academia
 ```
-## 🚀 Como rodar
-
-```bash
-python -m venv venv
-Windows: venv\Scripts\activate
-pip install -r requirements.txt
-python manage.py runserver
 
  Tela inicial do projeto
 
