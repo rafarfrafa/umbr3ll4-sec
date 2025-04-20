@@ -10,7 +10,7 @@ Site de introdução ao pentest e programação, levando conhecimento aos desenv
 ---
 
 ## 📌 Introdução
-O **SKYHARD GYM** é um site web para uma academia, incluindo sistema de login e assinatura de alunos.
+O **Umbr3ll4.S3c** é um site web para testar invasão, incluindo sistema de login, cadastro e falhas de segurança.
 
 
 ## ⚙️ Configuração
@@ -19,7 +19,7 @@ Coming Soon!
 
 ### Banco de Dados
 ```sql
-CREATE DATABASE db_academia
+CREATE DATABASE db_site
 ```
 
  Tela inicial do projeto
