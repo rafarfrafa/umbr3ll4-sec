@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuário</title>
+    <link rel="stylesheet" href="{% static 'Style.css' %}">
+    <link rel="icon" href="{% static 'favicon.png' %}" type="image/png">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h1>Editar Usuário</h1>
+
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Nome de Usuário:</label>
+                    <input type="text" id="username" name="username" value="{{ user.username }}" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" value="{{ user.email }}" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+            </form>
+
+            <div class="back-link">
+                <a href="{% url 'painel_admin' %}">Voltar ao Painel</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

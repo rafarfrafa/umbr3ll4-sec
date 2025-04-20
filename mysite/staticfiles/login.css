@@ -1,0 +1,96 @@
+body {
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    gap: 40px; /* espaço entre a tela de login e a imagem */
+}
+
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* sombreamento da tela */
+}
+
+.card-header h2 {
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.card-content-area {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* espaço inferior */
+}
+
+.card-content-area label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.card-content-area input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.card-content-area input:focus {
+    border-color: #4CAF50; /* borda verde ao focar */
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.submit {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.submit:hover {
+    background-color: #388e3c;
+}
+
+.recuperar-senha {
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 14px; 
+}
+
+.recuperar-senha:hover {
+    text-decoration: underline;
+}
+
+.imagem-lateral img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}

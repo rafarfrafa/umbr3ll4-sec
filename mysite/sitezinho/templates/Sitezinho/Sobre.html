@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="{% static 'Style.css' %}">
+</head>
+<body>
+    <div class="sobre">
+        <p>
+            Bem-vindo ao Umbr3ll4.S3c, um ambiente dedicado à segurança cibernética e testes de invasão. Nosso objetivo é ajudar profissionais e entusiastas da área a aprimorar suas habilidades em pentest, identificando vulnerabilidades e fortalecendo sistemas contra ataques reais.
+            Acreditamos que a melhor defesa começa com o conhecimento. Aqui, você encontrará recursos, ferramentas e desafios para testar e expandir suas competências em segurança ofensiva, sempre dentro dos princípios éticos e legais da área.
+            Seja você um iniciante buscando aprender ou um profissional experiente aperfeiçoando suas técnicas, nosso site oferece um espaço para explorar, experimentar e evoluir na cibersegurança.
+            Junte-se a nós e fortaleça o futuro da segurança digital!
+        </p>
+        <p><a href="{% url 'Index' %}">Voltar à Página Inicial</a></p>
+    </div>
+</body>
+</html>

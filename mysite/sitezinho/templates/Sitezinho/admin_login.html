@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin</title>
+    <link rel="stylesheet" href="{% static 'Login.css' %}">
+</head>
+<body>
+    <div id="login">
+        {% if messages %}
+          <div class="alert-container">
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <form class="card" method="POST">
+            {% csrf_token %}
+            <div class="card-header">
+                <h2>Login Administrador</h2>
+            </div>
+            <div class="card-content">
+                <div class="card-content-area">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" name="username" autocomplete="off" required>
+                </div>
+                <div class="card-content-area">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" autocomplete="off" required>
+                </div>
+            </div>
+            <div class="card-footer">
+                <input type="submit" value="Entrar" class="submit">
+            </div>
+        </form>
+    </div>
+
+    <div class="imagem-lateral">
+        <img src="{% static 'cyber-security-concept-digital-art.jpg' %}" alt="Cyber Security Image">
+    </div>
+</body>
+</html>

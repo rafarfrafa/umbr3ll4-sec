@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página inicial</title>
+    <link rel="stylesheet" href="{% static 'Style.css' %}">
+    <link rel="icon" href="{% static 'favicon.png' %}" type="image/png">
+</head>
+<body>
+    <div class="terminal-bar">
+        <div class="terminal-text">
+            <span class="progress-bar"><span class="progress-fill" style="width: 97%;"></span></span>
+            [97%] Bem-vindo ao Umbr3ll4.S3c <span class="user-tag">[root@access]</span>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="container">
+            <button type="button" onclick="location.href='{% url 'Index' %}'">Home</button>
+        </div>
+        <div class="right-container">
+            {% if user.is_authenticated %}
+                <button type="button" onclick="location.href='{% url 'painel_admin' %}'">Painel Admin</button>
+                <button type="button" onclick="location.href='{% url 'Logout' %}'">Logout</button>
+            {% else %}
+                <button type="button" onclick="location.href='{% url 'Login' %}'">Login</button>
+            {% endif %}
+        </div>
+    </div>
+
+    <img src="{% static 'cyber-security-concept-digital-art.jpg' %}" alt="Cyber Security Image">
+</body>
+</html>

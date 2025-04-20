@@ -1,0 +1,23 @@
+# Ambiente virtual
+.venv/
+
+# Arquivos do PyCharm/VScode
+.idea/
+.vscode/
+
+# Compilados Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Banco de dados SQLite
+*.sqlite3
+
+# Arquivos temporários
+*.log
+*.pot
+*.pyc
+.DS_Store
+
+# Arquivos de migração (opcional ignorar, mas muitos ignoram)
+*/migrations/__pycache__/

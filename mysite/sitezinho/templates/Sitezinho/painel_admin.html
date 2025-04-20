@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin</title>
+    <link rel="stylesheet" href="{% static 'Style.css' %}">
+</head>
+<body>
+    <h1>Bem-vindo ao Painel de Administração</h1>
+    <p>Bem-vindo, {{ user.username }}!</p>
+
+    <h2>Usuários Cadastrados</h2>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Ações</th>
+        </tr>
+        {% for usuario in usuarios %}
+        <tr>
+            <td>{{ usuario.username }}</td>
+            <td>{{ usuario.email }}</td>
+            <td>
+                <a href="{% url 'editar_usuario' usuario.id %}">Editar</a>
+                <a href="{% url 'deletar_usuario' usuario.id %}">Deletar</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">Nenhum usuário cadastrado.</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+    <p><a href="{% url 'Logout' %}">Sair</a></p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participantes</title>
+    <link rel="stylesheet" href="{% static 'Style.css' %}">
+</head>
+<body>
+    <h1>Participantes</h1>
+    <p>Lista de usuários participantes do Umbr3ll4.S3c.</p>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+        </tr>
+        {% for usuario in usuarios %}
+        <tr>
+            <td>{{ usuario.username }}</td>
+            <td>{{ usuario.email }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="2">Nenhum participante encontrado.</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p><a href="{% url 'Index' %}">Voltar à Página Inicial</a></p>
+</body>
+</html>
